@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Junior coders extension",
+    "description": "Base Level Extension",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "js": ["scripts/homework.js"],
+            "matches": [
+                "https://infoarena.ro/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+    }
+}
